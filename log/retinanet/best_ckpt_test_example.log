@@ -1,0 +1,2870 @@
+INFO test_net.py:  68: Called with args:
+INFO test_net.py:  69: Namespace(cfg_file='configs/baselines/retinanet_R-50-FPN_1x.yaml', dataset='coco2014mini', load_ckpt='best_ckpt/model_step142499.pth', load_detectron=None, multi_gpu_testing=True, output_dir=None, range=None, set_cfgs=[], vis=False)
+INFO test_net.py:  79: Automatically set output directory to test
+INFO test_net.py: 109: Testing with config:
+INFO test_net.py: 110: {'BBOX_XFORM_CLIP': 4.135166556742356,
+ 'CROP_RESIZE_WITH_MAX_POOL': True,
+ 'CUDA': False,
+ 'DATA_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data',
+ 'DATA_LOADER': {'NUM_THREADS': 4},
+ 'DEBUG': False,
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': '',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'CONV_HEAD_DIM': 256,
+               'MLP_HEAD_DIM': 1024,
+               'NUM_STACKED_CONVS': 4,
+               'ROI_BOX_HEAD': '',
+               'ROI_XFORM_METHOD': 'RoIPoolF',
+               'ROI_XFORM_RESOLUTION': 14,
+               'ROI_XFORM_SAMPLING_RATIO': 0},
+ 'FPN': {'COARSEST_STRIDE': 128,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': True,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 3,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_COLLECT_SCALE': 1,
+         'RPN_MAX_LEVEL': 7,
+         'RPN_MIN_LEVEL': 3,
+         'USE_GN': False,
+         'ZERO_INIT_LATERAL': False},
+ 'GROUP_NORM': {'DIM_PER_GP': -1, 'EPSILON': 1e-05, 'NUM_GROUPS': 32},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.fpn_ResNet50_conv5_body',
+           'FASTER_RCNN': False,
+           'KEYPOINTS_ON': False,
+           'LOAD_IMAGENET_PRETRAINED_WEIGHTS': True,
+           'MASK_ON': False,
+           'NUM_CLASSES': 81,
+           'RPN_ONLY': False,
+           'SHARE_RES5': False,
+           'TYPE': 'retinanet',
+           'UNSUPERVISED_POSE': False},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'GaussianFill',
+           'DILATION': 2,
+           'DIM_REDUCED': 256,
+           'MEMORY_EFFICIENT_LOSS': True,
+           'RESOLUTION': 14,
+           'ROI_MASK_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 8,
+ 'OUTPUT_DIR': 'Outputs',
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'PYTORCH_VERSION_LESS_THAN_040': False,
+ 'RESNETS': {'FREEZE_AT': 2,
+             'IMAGENET_PRETRAINED_WEIGHTS': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data/pretrained_model/retinanet.pkl',
+             'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'SHORTCUT_FUNC': 'basic_bn_shortcut',
+             'STEM_FUNC': 'basic_bn_stem',
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'USE_GN': False,
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (1.0, 2.0, 0.5),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': True,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'CLS_ACTIVATION': 'sigmoid',
+         'OUT_DIM': 512,
+         'OUT_DIM_AS_IN_DIM': True,
+         'RPN_ON': False,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.01,
+            'BIAS_DOUBLE_LR': True,
+            'BIAS_WEIGHT_DECAY': False,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 90000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 60000, 80000],
+            'STEP_SIZE': 30000,
+            'TYPE': 'SGD',
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': 'linear',
+            'WEIGHT_DECAY': 0.0001,
+            'WEIGHT_DECAY_GN': 0.0},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASETS': ('coco_2014_minival',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1333,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 2000,
+          'RPN_PRE_NMS_TOP_N': 10000,
+          'SCALE': 800,
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5}},
+ 'TRAIN': {'ASPECT_CROPPING': False,
+           'ASPECT_GROUPING': True,
+           'ASPECT_HI': 2,
+           'ASPECT_LO': 0.5,
+           'BATCH_SIZE_PER_IM': 64,
+           'BBOX_INSIDE_WEIGHTS': (1.0, 1.0, 1.0, 1.0),
+           'BBOX_NORMALIZE_MEANS': (0.0, 0.0, 0.0, 0.0),
+           'BBOX_NORMALIZE_STDS': (0.1, 0.1, 0.2, 0.2),
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': False,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('coco_2017_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 2,
+           'MAX_SIZE': 1333,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': -1,
+           'SCALES': (800,),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True},
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+loading annotations into memory...
+Done (t=0.79s)
+creating index...
+index created!
+INFO subprocess.py:  99: detection range command 0: python /mnt/lustre/chenzihao/mask-rcnn.pytorch/tools/test_net.py --range 0 625 --cfg test/detection_range_config.yaml --set TEST.DATASETS '("coco_2014_minival",)' --output_dir test --load_ckpt best_ckpt/model_step142499.pth
+INFO subprocess.py:  99: detection range command 1: python /mnt/lustre/chenzihao/mask-rcnn.pytorch/tools/test_net.py --range 625 1250 --cfg test/detection_range_config.yaml --set TEST.DATASETS '("coco_2014_minival",)' --output_dir test --load_ckpt best_ckpt/model_step142499.pth
+INFO subprocess.py:  99: detection range command 2: python /mnt/lustre/chenzihao/mask-rcnn.pytorch/tools/test_net.py --range 1250 1875 --cfg test/detection_range_config.yaml --set TEST.DATASETS '("coco_2014_minival",)' --output_dir test --load_ckpt best_ckpt/model_step142499.pth
+INFO subprocess.py:  99: detection range command 3: python /mnt/lustre/chenzihao/mask-rcnn.pytorch/tools/test_net.py --range 1875 2500 --cfg test/detection_range_config.yaml --set TEST.DATASETS '("coco_2014_minival",)' --output_dir test --load_ckpt best_ckpt/model_step142499.pth
+INFO subprocess.py:  99: detection range command 4: python /mnt/lustre/chenzihao/mask-rcnn.pytorch/tools/test_net.py --range 2500 3125 --cfg test/detection_range_config.yaml --set TEST.DATASETS '("coco_2014_minival",)' --output_dir test --load_ckpt best_ckpt/model_step142499.pth
+INFO subprocess.py:  99: detection range command 5: python /mnt/lustre/chenzihao/mask-rcnn.pytorch/tools/test_net.py --range 3125 3750 --cfg test/detection_range_config.yaml --set TEST.DATASETS '("coco_2014_minival",)' --output_dir test --load_ckpt best_ckpt/model_step142499.pth
+INFO subprocess.py:  99: detection range command 6: python /mnt/lustre/chenzihao/mask-rcnn.pytorch/tools/test_net.py --range 3750 4375 --cfg test/detection_range_config.yaml --set TEST.DATASETS '("coco_2014_minival",)' --output_dir test --load_ckpt best_ckpt/model_step142499.pth
+INFO subprocess.py:  99: detection range command 7: python /mnt/lustre/chenzihao/mask-rcnn.pytorch/tools/test_net.py --range 4375 5000 --cfg test/detection_range_config.yaml --set TEST.DATASETS '("coco_2014_minival",)' --output_dir test --load_ckpt best_ckpt/model_step142499.pth
+INFO subprocess.py: 147: # ---------------------------------------------------------------------------- #
+INFO subprocess.py: 149: stdout of subprocess 0 with range [1, 625]
+INFO subprocess.py: 151: # ---------------------------------------------------------------------------- #
+INFO test_net.py:  68: Called with args:
+INFO test_net.py:  69: Namespace(cfg_file='test/detection_range_config.yaml', dataset=None, load_ckpt='best_ckpt/model_step142499.pth', load_detectron=None, multi_gpu_testing=False, output_dir='test', range=[0, 625], set_cfgs=['TEST.DATASETS', '("coco_2014_minival",)'], vis=False)
+INFO test_net.py: 109: Testing with config:
+INFO test_net.py: 110: {'BBOX_XFORM_CLIP': 4.135166556742356,
+ 'CROP_RESIZE_WITH_MAX_POOL': True,
+ 'CUDA': False,
+ 'DATA_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data',
+ 'DATA_LOADER': {'NUM_THREADS': 4},
+ 'DEBUG': False,
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': '',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'CONV_HEAD_DIM': 256,
+               'MLP_HEAD_DIM': 1024,
+               'NUM_STACKED_CONVS': 4,
+               'ROI_BOX_HEAD': '',
+               'ROI_XFORM_METHOD': 'RoIPoolF',
+               'ROI_XFORM_RESOLUTION': 14,
+               'ROI_XFORM_SAMPLING_RATIO': 0},
+ 'FPN': {'COARSEST_STRIDE': 128,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': True,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 3,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_COLLECT_SCALE': 1,
+         'RPN_MAX_LEVEL': 7,
+         'RPN_MIN_LEVEL': 3,
+         'USE_GN': False,
+         'ZERO_INIT_LATERAL': False},
+ 'GROUP_NORM': {'DIM_PER_GP': -1, 'EPSILON': 1e-05, 'NUM_GROUPS': 32},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.fpn_ResNet50_conv5_body',
+           'FASTER_RCNN': False,
+           'KEYPOINTS_ON': False,
+           'LOAD_IMAGENET_PRETRAINED_WEIGHTS': True,
+           'MASK_ON': False,
+           'NUM_CLASSES': 81,
+           'RPN_ONLY': False,
+           'SHARE_RES5': False,
+           'TYPE': 'retinanet',
+           'UNSUPERVISED_POSE': False},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'GaussianFill',
+           'DILATION': 2,
+           'DIM_REDUCED': 256,
+           'MEMORY_EFFICIENT_LOSS': True,
+           'RESOLUTION': 14,
+           'ROI_MASK_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 8,
+ 'OUTPUT_DIR': 'Outputs',
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'PYTORCH_VERSION_LESS_THAN_040': False,
+ 'RESNETS': {'FREEZE_AT': 2,
+             'IMAGENET_PRETRAINED_WEIGHTS': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data/pretrained_model/retinanet.pkl',
+             'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'SHORTCUT_FUNC': 'basic_bn_shortcut',
+             'STEM_FUNC': 'basic_bn_stem',
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'USE_GN': False,
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (1.0, 2.0, 0.5),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': True,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'CLS_ACTIVATION': 'sigmoid',
+         'OUT_DIM': 512,
+         'OUT_DIM_AS_IN_DIM': True,
+         'RPN_ON': False,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.01,
+            'BIAS_DOUBLE_LR': True,
+            'BIAS_WEIGHT_DECAY': False,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 90000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 60000, 80000],
+            'STEP_SIZE': 30000,
+            'TYPE': 'SGD',
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': 'linear',
+            'WEIGHT_DECAY': 0.0001,
+            'WEIGHT_DECAY_GN': 0.0},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASETS': ('coco_2014_minival',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1333,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 2000,
+          'RPN_PRE_NMS_TOP_N': 10000,
+          'SCALE': 800,
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5}},
+ 'TRAIN': {'ASPECT_CROPPING': False,
+           'ASPECT_GROUPING': True,
+           'ASPECT_HI': 2,
+           'ASPECT_LO': 0.5,
+           'BATCH_SIZE_PER_IM': 64,
+           'BBOX_INSIDE_WEIGHTS': (1.0, 1.0, 1.0, 1.0),
+           'BBOX_NORMALIZE_MEANS': (0.0, 0.0, 0.0, 0.0),
+           'BBOX_NORMALIZE_STDS': (0.1, 0.1, 0.2, 0.2),
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': False,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('coco_2017_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 2,
+           'MAX_SIZE': 1333,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': -1,
+           'SCALES': (800,),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True},
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+loading annotations into memory...
+Done (t=0.59s)
+creating index...
+index created!
+INFO test_engine.py: 391: loading checkpoint best_ckpt/model_step142499.pth
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 1/625 0.258s + 0.080s (eta: 0:03:30)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 11/625 0.162s + 0.017s (eta: 0:01:50)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 21/625 0.158s + 0.014s (eta: 0:01:43)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 31/625 0.157s + 0.012s (eta: 0:01:40)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 41/625 0.159s + 0.013s (eta: 0:01:40)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 51/625 0.158s + 0.012s (eta: 0:01:37)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 61/625 0.158s + 0.012s (eta: 0:01:35)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 71/625 0.157s + 0.011s (eta: 0:01:33)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 81/625 0.157s + 0.011s (eta: 0:01:31)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 91/625 0.156s + 0.012s (eta: 0:01:29)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 101/625 0.156s + 0.012s (eta: 0:01:27)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 111/625 0.155s + 0.012s (eta: 0:01:25)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 121/625 0.155s + 0.012s (eta: 0:01:24)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 131/625 0.155s + 0.011s (eta: 0:01:22)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 141/625 0.155s + 0.011s (eta: 0:01:20)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 151/625 0.156s + 0.011s (eta: 0:01:19)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 161/625 0.156s + 0.011s (eta: 0:01:17)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 171/625 0.155s + 0.011s (eta: 0:01:15)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 181/625 0.155s + 0.011s (eta: 0:01:13)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 191/625 0.156s + 0.011s (eta: 0:01:12)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 201/625 0.155s + 0.011s (eta: 0:01:10)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 211/625 0.155s + 0.011s (eta: 0:01:08)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 221/625 0.155s + 0.011s (eta: 0:01:07)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 231/625 0.155s + 0.011s (eta: 0:01:05)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 241/625 0.155s + 0.011s (eta: 0:01:03)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 251/625 0.155s + 0.011s (eta: 0:01:02)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 261/625 0.155s + 0.011s (eta: 0:01:00)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 271/625 0.155s + 0.011s (eta: 0:00:58)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 281/625 0.155s + 0.011s (eta: 0:00:57)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 291/625 0.155s + 0.011s (eta: 0:00:55)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 301/625 0.155s + 0.011s (eta: 0:00:53)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 311/625 0.155s + 0.011s (eta: 0:00:52)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 321/625 0.155s + 0.011s (eta: 0:00:50)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 331/625 0.155s + 0.011s (eta: 0:00:49)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 341/625 0.156s + 0.011s (eta: 0:00:47)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 351/625 0.156s + 0.011s (eta: 0:00:45)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 361/625 0.156s + 0.011s (eta: 0:00:44)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 371/625 0.156s + 0.011s (eta: 0:00:42)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 381/625 0.156s + 0.011s (eta: 0:00:40)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 391/625 0.155s + 0.011s (eta: 0:00:38)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 401/625 0.155s + 0.011s (eta: 0:00:37)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 411/625 0.155s + 0.011s (eta: 0:00:35)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 421/625 0.155s + 0.011s (eta: 0:00:33)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 431/625 0.155s + 0.011s (eta: 0:00:32)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 441/625 0.155s + 0.011s (eta: 0:00:30)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 451/625 0.155s + 0.011s (eta: 0:00:28)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 461/625 0.155s + 0.011s (eta: 0:00:27)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 471/625 0.156s + 0.011s (eta: 0:00:25)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 481/625 0.156s + 0.011s (eta: 0:00:24)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 491/625 0.156s + 0.011s (eta: 0:00:22)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 501/625 0.156s + 0.011s (eta: 0:00:20)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 511/625 0.156s + 0.011s (eta: 0:00:19)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 521/625 0.156s + 0.011s (eta: 0:00:17)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 531/625 0.157s + 0.012s (eta: 0:00:15)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 541/625 0.157s + 0.012s (eta: 0:00:14)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 551/625 0.157s + 0.012s (eta: 0:00:12)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 561/625 0.157s + 0.012s (eta: 0:00:10)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 571/625 0.157s + 0.012s (eta: 0:00:09)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 581/625 0.157s + 0.012s (eta: 0:00:07)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 591/625 0.157s + 0.012s (eta: 0:00:05)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 601/625 0.157s + 0.012s (eta: 0:00:04)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 611/625 0.157s + 0.012s (eta: 0:00:02)
+INFO test_engine.py: 339: im_detect: range [1, 625] of 5000: 621/625 0.156s + 0.012s (eta: 0:00:00)
+INFO test_engine.py: 372: Wrote detections to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/detection_range_0_625.pkl
+INFO subprocess.py: 147: # ---------------------------------------------------------------------------- #
+INFO subprocess.py: 149: stdout of subprocess 1 with range [626, 1250]
+INFO subprocess.py: 151: # ---------------------------------------------------------------------------- #
+INFO test_net.py:  68: Called with args:
+INFO test_net.py:  69: Namespace(cfg_file='test/detection_range_config.yaml', dataset=None, load_ckpt='best_ckpt/model_step142499.pth', load_detectron=None, multi_gpu_testing=False, output_dir='test', range=[625, 1250], set_cfgs=['TEST.DATASETS', '("coco_2014_minival",)'], vis=False)
+INFO test_net.py: 109: Testing with config:
+INFO test_net.py: 110: {'BBOX_XFORM_CLIP': 4.135166556742356,
+ 'CROP_RESIZE_WITH_MAX_POOL': True,
+ 'CUDA': False,
+ 'DATA_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data',
+ 'DATA_LOADER': {'NUM_THREADS': 4},
+ 'DEBUG': False,
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': '',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'CONV_HEAD_DIM': 256,
+               'MLP_HEAD_DIM': 1024,
+               'NUM_STACKED_CONVS': 4,
+               'ROI_BOX_HEAD': '',
+               'ROI_XFORM_METHOD': 'RoIPoolF',
+               'ROI_XFORM_RESOLUTION': 14,
+               'ROI_XFORM_SAMPLING_RATIO': 0},
+ 'FPN': {'COARSEST_STRIDE': 128,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': True,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 3,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_COLLECT_SCALE': 1,
+         'RPN_MAX_LEVEL': 7,
+         'RPN_MIN_LEVEL': 3,
+         'USE_GN': False,
+         'ZERO_INIT_LATERAL': False},
+ 'GROUP_NORM': {'DIM_PER_GP': -1, 'EPSILON': 1e-05, 'NUM_GROUPS': 32},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.fpn_ResNet50_conv5_body',
+           'FASTER_RCNN': False,
+           'KEYPOINTS_ON': False,
+           'LOAD_IMAGENET_PRETRAINED_WEIGHTS': True,
+           'MASK_ON': False,
+           'NUM_CLASSES': 81,
+           'RPN_ONLY': False,
+           'SHARE_RES5': False,
+           'TYPE': 'retinanet',
+           'UNSUPERVISED_POSE': False},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'GaussianFill',
+           'DILATION': 2,
+           'DIM_REDUCED': 256,
+           'MEMORY_EFFICIENT_LOSS': True,
+           'RESOLUTION': 14,
+           'ROI_MASK_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 8,
+ 'OUTPUT_DIR': 'Outputs',
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'PYTORCH_VERSION_LESS_THAN_040': False,
+ 'RESNETS': {'FREEZE_AT': 2,
+             'IMAGENET_PRETRAINED_WEIGHTS': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data/pretrained_model/retinanet.pkl',
+             'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'SHORTCUT_FUNC': 'basic_bn_shortcut',
+             'STEM_FUNC': 'basic_bn_stem',
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'USE_GN': False,
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (1.0, 2.0, 0.5),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': True,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'CLS_ACTIVATION': 'sigmoid',
+         'OUT_DIM': 512,
+         'OUT_DIM_AS_IN_DIM': True,
+         'RPN_ON': False,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.01,
+            'BIAS_DOUBLE_LR': True,
+            'BIAS_WEIGHT_DECAY': False,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 90000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 60000, 80000],
+            'STEP_SIZE': 30000,
+            'TYPE': 'SGD',
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': 'linear',
+            'WEIGHT_DECAY': 0.0001,
+            'WEIGHT_DECAY_GN': 0.0},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASETS': ('coco_2014_minival',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1333,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 2000,
+          'RPN_PRE_NMS_TOP_N': 10000,
+          'SCALE': 800,
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5}},
+ 'TRAIN': {'ASPECT_CROPPING': False,
+           'ASPECT_GROUPING': True,
+           'ASPECT_HI': 2,
+           'ASPECT_LO': 0.5,
+           'BATCH_SIZE_PER_IM': 64,
+           'BBOX_INSIDE_WEIGHTS': (1.0, 1.0, 1.0, 1.0),
+           'BBOX_NORMALIZE_MEANS': (0.0, 0.0, 0.0, 0.0),
+           'BBOX_NORMALIZE_STDS': (0.1, 0.1, 0.2, 0.2),
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': False,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('coco_2017_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 2,
+           'MAX_SIZE': 1333,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': -1,
+           'SCALES': (800,),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True},
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+loading annotations into memory...
+Done (t=0.67s)
+creating index...
+index created!
+INFO test_engine.py: 391: loading checkpoint best_ckpt/model_step142499.pth
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 626/1250 0.250s + 0.074s (eta: 0:03:21)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 636/1250 0.159s + 0.017s (eta: 0:01:48)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 646/1250 0.155s + 0.015s (eta: 0:01:42)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 656/1250 0.153s + 0.013s (eta: 0:01:38)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 666/1250 0.153s + 0.012s (eta: 0:01:36)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 676/1250 0.153s + 0.012s (eta: 0:01:34)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 686/1250 0.152s + 0.011s (eta: 0:01:32)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 696/1250 0.152s + 0.011s (eta: 0:01:30)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 706/1250 0.152s + 0.011s (eta: 0:01:28)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 716/1250 0.152s + 0.011s (eta: 0:01:26)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 726/1250 0.152s + 0.011s (eta: 0:01:25)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 736/1250 0.152s + 0.011s (eta: 0:01:23)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 746/1250 0.152s + 0.011s (eta: 0:01:21)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 756/1250 0.152s + 0.011s (eta: 0:01:20)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 766/1250 0.152s + 0.011s (eta: 0:01:18)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 776/1250 0.152s + 0.010s (eta: 0:01:16)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 786/1250 0.152s + 0.010s (eta: 0:01:15)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 796/1250 0.152s + 0.010s (eta: 0:01:13)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 806/1250 0.152s + 0.010s (eta: 0:01:11)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 816/1250 0.152s + 0.010s (eta: 0:01:10)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 826/1250 0.152s + 0.010s (eta: 0:01:08)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 836/1250 0.152s + 0.010s (eta: 0:01:06)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 846/1250 0.152s + 0.010s (eta: 0:01:05)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 856/1250 0.152s + 0.010s (eta: 0:01:03)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 866/1250 0.152s + 0.010s (eta: 0:01:02)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 876/1250 0.151s + 0.010s (eta: 0:01:00)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 886/1250 0.152s + 0.010s (eta: 0:00:58)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 896/1250 0.151s + 0.010s (eta: 0:00:57)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 906/1250 0.151s + 0.010s (eta: 0:00:55)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 916/1250 0.151s + 0.010s (eta: 0:00:53)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 926/1250 0.151s + 0.010s (eta: 0:00:52)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 936/1250 0.151s + 0.010s (eta: 0:00:50)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 946/1250 0.151s + 0.010s (eta: 0:00:48)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 956/1250 0.151s + 0.010s (eta: 0:00:47)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 966/1250 0.151s + 0.010s (eta: 0:00:45)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 976/1250 0.151s + 0.010s (eta: 0:00:44)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 986/1250 0.151s + 0.010s (eta: 0:00:42)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 996/1250 0.151s + 0.010s (eta: 0:00:40)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1006/1250 0.151s + 0.010s (eta: 0:00:39)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1016/1250 0.151s + 0.010s (eta: 0:00:37)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1026/1250 0.151s + 0.010s (eta: 0:00:36)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1036/1250 0.151s + 0.010s (eta: 0:00:34)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1046/1250 0.151s + 0.010s (eta: 0:00:32)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1056/1250 0.151s + 0.010s (eta: 0:00:31)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1066/1250 0.151s + 0.010s (eta: 0:00:29)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1076/1250 0.151s + 0.010s (eta: 0:00:28)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1086/1250 0.151s + 0.010s (eta: 0:00:26)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1096/1250 0.151s + 0.010s (eta: 0:00:24)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1106/1250 0.151s + 0.010s (eta: 0:00:23)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1116/1250 0.151s + 0.010s (eta: 0:00:21)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1126/1250 0.151s + 0.010s (eta: 0:00:20)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1136/1250 0.151s + 0.010s (eta: 0:00:18)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1146/1250 0.151s + 0.010s (eta: 0:00:16)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1156/1250 0.151s + 0.010s (eta: 0:00:15)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1166/1250 0.152s + 0.010s (eta: 0:00:13)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1176/1250 0.152s + 0.010s (eta: 0:00:11)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1186/1250 0.152s + 0.011s (eta: 0:00:10)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1196/1250 0.152s + 0.011s (eta: 0:00:08)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1206/1250 0.152s + 0.011s (eta: 0:00:07)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1216/1250 0.152s + 0.011s (eta: 0:00:05)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1226/1250 0.152s + 0.011s (eta: 0:00:03)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1236/1250 0.152s + 0.011s (eta: 0:00:02)
+INFO test_engine.py: 339: im_detect: range [626, 1250] of 5000: 1246/1250 0.152s + 0.011s (eta: 0:00:00)
+INFO test_engine.py: 372: Wrote detections to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/detection_range_625_1250.pkl
+
+INFO subprocess.py: 147: # ---------------------------------------------------------------------------- #
+INFO subprocess.py: 149: stdout of subprocess 2 with range [1251, 1875]
+INFO subprocess.py: 151: # ---------------------------------------------------------------------------- #
+INFO test_net.py:  68: Called with args:
+INFO test_net.py:  69: Namespace(cfg_file='test/detection_range_config.yaml', dataset=None, load_ckpt='best_ckpt/model_step142499.pth', load_detectron=None, multi_gpu_testing=False, output_dir='test', range=[1250, 1875], set_cfgs=['TEST.DATASETS', '("coco_2014_minival",)'], vis=False)
+INFO test_net.py: 109: Testing with config:
+INFO test_net.py: 110: {'BBOX_XFORM_CLIP': 4.135166556742356,
+ 'CROP_RESIZE_WITH_MAX_POOL': True,
+ 'CUDA': False,
+ 'DATA_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data',
+ 'DATA_LOADER': {'NUM_THREADS': 4},
+ 'DEBUG': False,
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': '',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'CONV_HEAD_DIM': 256,
+               'MLP_HEAD_DIM': 1024,
+               'NUM_STACKED_CONVS': 4,
+               'ROI_BOX_HEAD': '',
+               'ROI_XFORM_METHOD': 'RoIPoolF',
+               'ROI_XFORM_RESOLUTION': 14,
+               'ROI_XFORM_SAMPLING_RATIO': 0},
+ 'FPN': {'COARSEST_STRIDE': 128,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': True,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 3,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_COLLECT_SCALE': 1,
+         'RPN_MAX_LEVEL': 7,
+         'RPN_MIN_LEVEL': 3,
+         'USE_GN': False,
+         'ZERO_INIT_LATERAL': False},
+ 'GROUP_NORM': {'DIM_PER_GP': -1, 'EPSILON': 1e-05, 'NUM_GROUPS': 32},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.fpn_ResNet50_conv5_body',
+           'FASTER_RCNN': False,
+           'KEYPOINTS_ON': False,
+           'LOAD_IMAGENET_PRETRAINED_WEIGHTS': True,
+           'MASK_ON': False,
+           'NUM_CLASSES': 81,
+           'RPN_ONLY': False,
+           'SHARE_RES5': False,
+           'TYPE': 'retinanet',
+           'UNSUPERVISED_POSE': False},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'GaussianFill',
+           'DILATION': 2,
+           'DIM_REDUCED': 256,
+           'MEMORY_EFFICIENT_LOSS': True,
+           'RESOLUTION': 14,
+           'ROI_MASK_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 8,
+ 'OUTPUT_DIR': 'Outputs',
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'PYTORCH_VERSION_LESS_THAN_040': False,
+ 'RESNETS': {'FREEZE_AT': 2,
+             'IMAGENET_PRETRAINED_WEIGHTS': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data/pretrained_model/retinanet.pkl',
+             'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'SHORTCUT_FUNC': 'basic_bn_shortcut',
+             'STEM_FUNC': 'basic_bn_stem',
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'USE_GN': False,
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (1.0, 2.0, 0.5),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': True,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'CLS_ACTIVATION': 'sigmoid',
+         'OUT_DIM': 512,
+         'OUT_DIM_AS_IN_DIM': True,
+         'RPN_ON': False,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.01,
+            'BIAS_DOUBLE_LR': True,
+            'BIAS_WEIGHT_DECAY': False,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 90000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 60000, 80000],
+            'STEP_SIZE': 30000,
+            'TYPE': 'SGD',
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': 'linear',
+            'WEIGHT_DECAY': 0.0001,
+            'WEIGHT_DECAY_GN': 0.0},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASETS': ('coco_2014_minival',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1333,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 2000,
+          'RPN_PRE_NMS_TOP_N': 10000,
+          'SCALE': 800,
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5}},
+ 'TRAIN': {'ASPECT_CROPPING': False,
+           'ASPECT_GROUPING': True,
+           'ASPECT_HI': 2,
+           'ASPECT_LO': 0.5,
+           'BATCH_SIZE_PER_IM': 64,
+           'BBOX_INSIDE_WEIGHTS': (1.0, 1.0, 1.0, 1.0),
+           'BBOX_NORMALIZE_MEANS': (0.0, 0.0, 0.0, 0.0),
+           'BBOX_NORMALIZE_STDS': (0.1, 0.1, 0.2, 0.2),
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': False,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('coco_2017_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 2,
+           'MAX_SIZE': 1333,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': -1,
+           'SCALES': (800,),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True},
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+loading annotations into memory...
+Done (t=0.50s)
+creating index...
+index created!
+INFO test_engine.py: 391: loading checkpoint best_ckpt/model_step142499.pth
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1251/1875 0.265s + 0.073s (eta: 0:03:30)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1261/1875 0.166s + 0.015s (eta: 0:01:50)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1271/1875 0.154s + 0.013s (eta: 0:01:40)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1281/1875 0.156s + 0.012s (eta: 0:01:39)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1291/1875 0.154s + 0.011s (eta: 0:01:36)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1301/1875 0.152s + 0.011s (eta: 0:01:33)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1311/1875 0.150s + 0.011s (eta: 0:01:30)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1321/1875 0.150s + 0.011s (eta: 0:01:28)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1331/1875 0.150s + 0.010s (eta: 0:01:27)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1341/1875 0.150s + 0.010s (eta: 0:01:25)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1351/1875 0.150s + 0.011s (eta: 0:01:23)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1361/1875 0.150s + 0.011s (eta: 0:01:22)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1371/1875 0.150s + 0.011s (eta: 0:01:21)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1381/1875 0.150s + 0.011s (eta: 0:01:19)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1391/1875 0.150s + 0.011s (eta: 0:01:17)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1401/1875 0.150s + 0.010s (eta: 0:01:15)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1411/1875 0.150s + 0.010s (eta: 0:01:14)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1421/1875 0.149s + 0.010s (eta: 0:01:12)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1431/1875 0.149s + 0.010s (eta: 0:01:10)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1441/1875 0.149s + 0.010s (eta: 0:01:09)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1451/1875 0.149s + 0.010s (eta: 0:01:07)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1461/1875 0.149s + 0.010s (eta: 0:01:05)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1471/1875 0.148s + 0.010s (eta: 0:01:04)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1481/1875 0.149s + 0.010s (eta: 0:01:02)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1491/1875 0.148s + 0.010s (eta: 0:01:00)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1501/1875 0.148s + 0.010s (eta: 0:00:59)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1511/1875 0.148s + 0.010s (eta: 0:00:57)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1521/1875 0.148s + 0.010s (eta: 0:00:55)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1531/1875 0.148s + 0.010s (eta: 0:00:54)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1541/1875 0.148s + 0.010s (eta: 0:00:52)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1551/1875 0.148s + 0.010s (eta: 0:00:51)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1561/1875 0.148s + 0.010s (eta: 0:00:49)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1571/1875 0.148s + 0.010s (eta: 0:00:48)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1581/1875 0.148s + 0.010s (eta: 0:00:46)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1591/1875 0.148s + 0.010s (eta: 0:00:45)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1601/1875 0.148s + 0.010s (eta: 0:00:43)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1611/1875 0.148s + 0.010s (eta: 0:00:41)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1621/1875 0.148s + 0.010s (eta: 0:00:40)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1631/1875 0.148s + 0.010s (eta: 0:00:38)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1641/1875 0.149s + 0.010s (eta: 0:00:37)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1651/1875 0.149s + 0.010s (eta: 0:00:35)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1661/1875 0.149s + 0.010s (eta: 0:00:33)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1671/1875 0.149s + 0.010s (eta: 0:00:32)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1681/1875 0.149s + 0.010s (eta: 0:00:30)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1691/1875 0.149s + 0.010s (eta: 0:00:29)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1701/1875 0.149s + 0.010s (eta: 0:00:27)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1711/1875 0.148s + 0.010s (eta: 0:00:26)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1721/1875 0.148s + 0.010s (eta: 0:00:24)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1731/1875 0.149s + 0.010s (eta: 0:00:22)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1741/1875 0.149s + 0.010s (eta: 0:00:21)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1751/1875 0.149s + 0.010s (eta: 0:00:19)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1761/1875 0.149s + 0.010s (eta: 0:00:18)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1771/1875 0.149s + 0.010s (eta: 0:00:16)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1781/1875 0.149s + 0.010s (eta: 0:00:14)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1791/1875 0.149s + 0.010s (eta: 0:00:13)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1801/1875 0.149s + 0.010s (eta: 0:00:11)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1811/1875 0.150s + 0.011s (eta: 0:00:10)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1821/1875 0.150s + 0.011s (eta: 0:00:08)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1831/1875 0.150s + 0.011s (eta: 0:00:07)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1841/1875 0.150s + 0.011s (eta: 0:00:05)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1851/1875 0.149s + 0.011s (eta: 0:00:03)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1861/1875 0.150s + 0.011s (eta: 0:00:02)
+INFO test_engine.py: 339: im_detect: range [1251, 1875] of 5000: 1871/1875 0.150s + 0.011s (eta: 0:00:00)
+INFO test_engine.py: 372: Wrote detections to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/detection_range_1250_1875.pkl
+
+INFO subprocess.py: 147: # ---------------------------------------------------------------------------- #
+INFO subprocess.py: 149: stdout of subprocess 3 with range [1876, 2500]
+INFO subprocess.py: 151: # ---------------------------------------------------------------------------- #
+INFO test_net.py:  68: Called with args:
+INFO test_net.py:  69: Namespace(cfg_file='test/detection_range_config.yaml', dataset=None, load_ckpt='best_ckpt/model_step142499.pth', load_detectron=None, multi_gpu_testing=False, output_dir='test', range=[1875, 2500], set_cfgs=['TEST.DATASETS', '("coco_2014_minival",)'], vis=False)
+INFO test_net.py: 109: Testing with config:
+INFO test_net.py: 110: {'BBOX_XFORM_CLIP': 4.135166556742356,
+ 'CROP_RESIZE_WITH_MAX_POOL': True,
+ 'CUDA': False,
+ 'DATA_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data',
+ 'DATA_LOADER': {'NUM_THREADS': 4},
+ 'DEBUG': False,
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': '',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'CONV_HEAD_DIM': 256,
+               'MLP_HEAD_DIM': 1024,
+               'NUM_STACKED_CONVS': 4,
+               'ROI_BOX_HEAD': '',
+               'ROI_XFORM_METHOD': 'RoIPoolF',
+               'ROI_XFORM_RESOLUTION': 14,
+               'ROI_XFORM_SAMPLING_RATIO': 0},
+ 'FPN': {'COARSEST_STRIDE': 128,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': True,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 3,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_COLLECT_SCALE': 1,
+         'RPN_MAX_LEVEL': 7,
+         'RPN_MIN_LEVEL': 3,
+         'USE_GN': False,
+         'ZERO_INIT_LATERAL': False},
+ 'GROUP_NORM': {'DIM_PER_GP': -1, 'EPSILON': 1e-05, 'NUM_GROUPS': 32},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.fpn_ResNet50_conv5_body',
+           'FASTER_RCNN': False,
+           'KEYPOINTS_ON': False,
+           'LOAD_IMAGENET_PRETRAINED_WEIGHTS': True,
+           'MASK_ON': False,
+           'NUM_CLASSES': 81,
+           'RPN_ONLY': False,
+           'SHARE_RES5': False,
+           'TYPE': 'retinanet',
+           'UNSUPERVISED_POSE': False},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'GaussianFill',
+           'DILATION': 2,
+           'DIM_REDUCED': 256,
+           'MEMORY_EFFICIENT_LOSS': True,
+           'RESOLUTION': 14,
+           'ROI_MASK_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 8,
+ 'OUTPUT_DIR': 'Outputs',
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'PYTORCH_VERSION_LESS_THAN_040': False,
+ 'RESNETS': {'FREEZE_AT': 2,
+             'IMAGENET_PRETRAINED_WEIGHTS': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data/pretrained_model/retinanet.pkl',
+             'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'SHORTCUT_FUNC': 'basic_bn_shortcut',
+             'STEM_FUNC': 'basic_bn_stem',
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'USE_GN': False,
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (1.0, 2.0, 0.5),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': True,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'CLS_ACTIVATION': 'sigmoid',
+         'OUT_DIM': 512,
+         'OUT_DIM_AS_IN_DIM': True,
+         'RPN_ON': False,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.01,
+            'BIAS_DOUBLE_LR': True,
+            'BIAS_WEIGHT_DECAY': False,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 90000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 60000, 80000],
+            'STEP_SIZE': 30000,
+            'TYPE': 'SGD',
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': 'linear',
+            'WEIGHT_DECAY': 0.0001,
+            'WEIGHT_DECAY_GN': 0.0},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASETS': ('coco_2014_minival',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1333,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 2000,
+          'RPN_PRE_NMS_TOP_N': 10000,
+          'SCALE': 800,
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5}},
+ 'TRAIN': {'ASPECT_CROPPING': False,
+           'ASPECT_GROUPING': True,
+           'ASPECT_HI': 2,
+           'ASPECT_LO': 0.5,
+           'BATCH_SIZE_PER_IM': 64,
+           'BBOX_INSIDE_WEIGHTS': (1.0, 1.0, 1.0, 1.0),
+           'BBOX_NORMALIZE_MEANS': (0.0, 0.0, 0.0, 0.0),
+           'BBOX_NORMALIZE_STDS': (0.1, 0.1, 0.2, 0.2),
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': False,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('coco_2017_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 2,
+           'MAX_SIZE': 1333,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': -1,
+           'SCALES': (800,),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True},
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+loading annotations into memory...
+Done (t=0.49s)
+creating index...
+index created!
+INFO test_engine.py: 391: loading checkpoint best_ckpt/model_step142499.pth
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1876/2500 0.251s + 0.077s (eta: 0:03:24)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1886/2500 0.167s + 0.017s (eta: 0:01:53)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1896/2500 0.160s + 0.014s (eta: 0:01:44)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1906/2500 0.158s + 0.013s (eta: 0:01:41)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1916/2500 0.156s + 0.011s (eta: 0:01:37)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1926/2500 0.156s + 0.011s (eta: 0:01:35)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1936/2500 0.154s + 0.010s (eta: 0:01:32)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1946/2500 0.153s + 0.010s (eta: 0:01:30)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1956/2500 0.153s + 0.010s (eta: 0:01:28)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1966/2500 0.152s + 0.010s (eta: 0:01:26)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1976/2500 0.152s + 0.010s (eta: 0:01:25)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1986/2500 0.152s + 0.010s (eta: 0:01:23)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 1996/2500 0.152s + 0.011s (eta: 0:01:22)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2006/2500 0.153s + 0.011s (eta: 0:01:20)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2016/2500 0.153s + 0.011s (eta: 0:01:19)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2026/2500 0.153s + 0.011s (eta: 0:01:17)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2036/2500 0.153s + 0.011s (eta: 0:01:15)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2046/2500 0.152s + 0.011s (eta: 0:01:13)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2056/2500 0.152s + 0.011s (eta: 0:01:12)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2066/2500 0.152s + 0.011s (eta: 0:01:10)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2076/2500 0.152s + 0.011s (eta: 0:01:08)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2086/2500 0.152s + 0.011s (eta: 0:01:07)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2096/2500 0.152s + 0.010s (eta: 0:01:05)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2106/2500 0.151s + 0.010s (eta: 0:01:03)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2116/2500 0.151s + 0.010s (eta: 0:01:01)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2126/2500 0.151s + 0.010s (eta: 0:01:00)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2136/2500 0.151s + 0.010s (eta: 0:00:58)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2146/2500 0.151s + 0.010s (eta: 0:00:56)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2156/2500 0.151s + 0.010s (eta: 0:00:55)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2166/2500 0.151s + 0.010s (eta: 0:00:53)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2176/2500 0.151s + 0.010s (eta: 0:00:52)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2186/2500 0.150s + 0.010s (eta: 0:00:50)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2196/2500 0.151s + 0.010s (eta: 0:00:48)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2206/2500 0.151s + 0.010s (eta: 0:00:47)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2216/2500 0.150s + 0.010s (eta: 0:00:45)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2226/2500 0.150s + 0.010s (eta: 0:00:44)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2236/2500 0.150s + 0.010s (eta: 0:00:42)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2246/2500 0.151s + 0.010s (eta: 0:00:40)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2256/2500 0.151s + 0.010s (eta: 0:00:39)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2266/2500 0.151s + 0.010s (eta: 0:00:37)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2276/2500 0.151s + 0.010s (eta: 0:00:36)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2286/2500 0.151s + 0.010s (eta: 0:00:34)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2296/2500 0.151s + 0.010s (eta: 0:00:32)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2306/2500 0.151s + 0.010s (eta: 0:00:31)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2316/2500 0.151s + 0.010s (eta: 0:00:29)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2326/2500 0.150s + 0.010s (eta: 0:00:27)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2336/2500 0.150s + 0.010s (eta: 0:00:26)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2346/2500 0.151s + 0.010s (eta: 0:00:24)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2356/2500 0.151s + 0.010s (eta: 0:00:23)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2366/2500 0.151s + 0.010s (eta: 0:00:21)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2376/2500 0.151s + 0.010s (eta: 0:00:19)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2386/2500 0.150s + 0.010s (eta: 0:00:18)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2396/2500 0.150s + 0.010s (eta: 0:00:16)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2406/2500 0.151s + 0.010s (eta: 0:00:15)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2416/2500 0.151s + 0.010s (eta: 0:00:13)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2426/2500 0.151s + 0.010s (eta: 0:00:11)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2436/2500 0.152s + 0.011s (eta: 0:00:10)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2446/2500 0.152s + 0.011s (eta: 0:00:08)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2456/2500 0.152s + 0.011s (eta: 0:00:07)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2466/2500 0.152s + 0.011s (eta: 0:00:05)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2476/2500 0.151s + 0.011s (eta: 0:00:03)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2486/2500 0.151s + 0.011s (eta: 0:00:02)
+INFO test_engine.py: 339: im_detect: range [1876, 2500] of 5000: 2496/2500 0.151s + 0.011s (eta: 0:00:00)
+INFO test_engine.py: 372: Wrote detections to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/detection_range_1875_2500.pkl
+
+INFO subprocess.py: 147: # ---------------------------------------------------------------------------- #
+INFO subprocess.py: 149: stdout of subprocess 4 with range [2501, 3125]
+INFO subprocess.py: 151: # ---------------------------------------------------------------------------- #
+INFO test_net.py:  68: Called with args:
+INFO test_net.py:  69: Namespace(cfg_file='test/detection_range_config.yaml', dataset=None, load_ckpt='best_ckpt/model_step142499.pth', load_detectron=None, multi_gpu_testing=False, output_dir='test', range=[2500, 3125], set_cfgs=['TEST.DATASETS', '("coco_2014_minival",)'], vis=False)
+INFO test_net.py: 109: Testing with config:
+INFO test_net.py: 110: {'BBOX_XFORM_CLIP': 4.135166556742356,
+ 'CROP_RESIZE_WITH_MAX_POOL': True,
+ 'CUDA': False,
+ 'DATA_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data',
+ 'DATA_LOADER': {'NUM_THREADS': 4},
+ 'DEBUG': False,
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': '',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'CONV_HEAD_DIM': 256,
+               'MLP_HEAD_DIM': 1024,
+               'NUM_STACKED_CONVS': 4,
+               'ROI_BOX_HEAD': '',
+               'ROI_XFORM_METHOD': 'RoIPoolF',
+               'ROI_XFORM_RESOLUTION': 14,
+               'ROI_XFORM_SAMPLING_RATIO': 0},
+ 'FPN': {'COARSEST_STRIDE': 128,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': True,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 3,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_COLLECT_SCALE': 1,
+         'RPN_MAX_LEVEL': 7,
+         'RPN_MIN_LEVEL': 3,
+         'USE_GN': False,
+         'ZERO_INIT_LATERAL': False},
+ 'GROUP_NORM': {'DIM_PER_GP': -1, 'EPSILON': 1e-05, 'NUM_GROUPS': 32},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.fpn_ResNet50_conv5_body',
+           'FASTER_RCNN': False,
+           'KEYPOINTS_ON': False,
+           'LOAD_IMAGENET_PRETRAINED_WEIGHTS': True,
+           'MASK_ON': False,
+           'NUM_CLASSES': 81,
+           'RPN_ONLY': False,
+           'SHARE_RES5': False,
+           'TYPE': 'retinanet',
+           'UNSUPERVISED_POSE': False},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'GaussianFill',
+           'DILATION': 2,
+           'DIM_REDUCED': 256,
+           'MEMORY_EFFICIENT_LOSS': True,
+           'RESOLUTION': 14,
+           'ROI_MASK_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 8,
+ 'OUTPUT_DIR': 'Outputs',
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'PYTORCH_VERSION_LESS_THAN_040': False,
+ 'RESNETS': {'FREEZE_AT': 2,
+             'IMAGENET_PRETRAINED_WEIGHTS': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data/pretrained_model/retinanet.pkl',
+             'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'SHORTCUT_FUNC': 'basic_bn_shortcut',
+             'STEM_FUNC': 'basic_bn_stem',
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'USE_GN': False,
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (1.0, 2.0, 0.5),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': True,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'CLS_ACTIVATION': 'sigmoid',
+         'OUT_DIM': 512,
+         'OUT_DIM_AS_IN_DIM': True,
+         'RPN_ON': False,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.01,
+            'BIAS_DOUBLE_LR': True,
+            'BIAS_WEIGHT_DECAY': False,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 90000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 60000, 80000],
+            'STEP_SIZE': 30000,
+            'TYPE': 'SGD',
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': 'linear',
+            'WEIGHT_DECAY': 0.0001,
+            'WEIGHT_DECAY_GN': 0.0},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASETS': ('coco_2014_minival',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1333,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 2000,
+          'RPN_PRE_NMS_TOP_N': 10000,
+          'SCALE': 800,
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5}},
+ 'TRAIN': {'ASPECT_CROPPING': False,
+           'ASPECT_GROUPING': True,
+           'ASPECT_HI': 2,
+           'ASPECT_LO': 0.5,
+           'BATCH_SIZE_PER_IM': 64,
+           'BBOX_INSIDE_WEIGHTS': (1.0, 1.0, 1.0, 1.0),
+           'BBOX_NORMALIZE_MEANS': (0.0, 0.0, 0.0, 0.0),
+           'BBOX_NORMALIZE_STDS': (0.1, 0.1, 0.2, 0.2),
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': False,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('coco_2017_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 2,
+           'MAX_SIZE': 1333,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': -1,
+           'SCALES': (800,),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True},
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+loading annotations into memory...
+Done (t=0.65s)
+creating index...
+index created!
+INFO test_engine.py: 391: loading checkpoint best_ckpt/model_step142499.pth
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2501/3125 0.256s + 0.073s (eta: 0:03:24)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2511/3125 0.164s + 0.017s (eta: 0:01:50)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2521/3125 0.160s + 0.014s (eta: 0:01:45)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2531/3125 0.156s + 0.013s (eta: 0:01:40)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2541/3125 0.153s + 0.012s (eta: 0:01:36)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2551/3125 0.153s + 0.013s (eta: 0:01:35)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2561/3125 0.153s + 0.012s (eta: 0:01:33)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2571/3125 0.152s + 0.012s (eta: 0:01:30)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2581/3125 0.151s + 0.012s (eta: 0:01:29)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2591/3125 0.151s + 0.012s (eta: 0:01:27)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2601/3125 0.151s + 0.012s (eta: 0:01:25)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2611/3125 0.151s + 0.012s (eta: 0:01:23)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2621/3125 0.150s + 0.012s (eta: 0:01:21)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2631/3125 0.150s + 0.012s (eta: 0:01:20)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2641/3125 0.150s + 0.012s (eta: 0:01:18)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2651/3125 0.151s + 0.012s (eta: 0:01:17)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2661/3125 0.151s + 0.012s (eta: 0:01:15)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2671/3125 0.151s + 0.012s (eta: 0:01:13)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2681/3125 0.151s + 0.012s (eta: 0:01:12)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2691/3125 0.151s + 0.011s (eta: 0:01:10)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2701/3125 0.151s + 0.011s (eta: 0:01:08)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2711/3125 0.151s + 0.011s (eta: 0:01:07)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2721/3125 0.152s + 0.011s (eta: 0:01:05)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2731/3125 0.151s + 0.011s (eta: 0:01:04)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2741/3125 0.151s + 0.011s (eta: 0:01:02)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2751/3125 0.151s + 0.011s (eta: 0:01:00)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2761/3125 0.151s + 0.011s (eta: 0:00:59)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2771/3125 0.151s + 0.011s (eta: 0:00:57)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2781/3125 0.151s + 0.011s (eta: 0:00:55)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2791/3125 0.151s + 0.011s (eta: 0:00:54)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2801/3125 0.151s + 0.011s (eta: 0:00:52)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2811/3125 0.151s + 0.011s (eta: 0:00:50)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2821/3125 0.151s + 0.011s (eta: 0:00:49)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2831/3125 0.151s + 0.011s (eta: 0:00:47)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2841/3125 0.152s + 0.011s (eta: 0:00:46)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2851/3125 0.152s + 0.011s (eta: 0:00:44)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2861/3125 0.151s + 0.011s (eta: 0:00:42)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2871/3125 0.151s + 0.011s (eta: 0:00:41)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2881/3125 0.152s + 0.011s (eta: 0:00:39)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2891/3125 0.152s + 0.011s (eta: 0:00:38)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2901/3125 0.151s + 0.011s (eta: 0:00:36)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2911/3125 0.152s + 0.011s (eta: 0:00:34)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2921/3125 0.152s + 0.011s (eta: 0:00:33)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2931/3125 0.152s + 0.011s (eta: 0:00:31)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2941/3125 0.152s + 0.011s (eta: 0:00:29)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2951/3125 0.152s + 0.011s (eta: 0:00:28)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2961/3125 0.152s + 0.011s (eta: 0:00:26)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2971/3125 0.152s + 0.011s (eta: 0:00:25)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2981/3125 0.152s + 0.011s (eta: 0:00:23)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 2991/3125 0.152s + 0.011s (eta: 0:00:21)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3001/3125 0.152s + 0.011s (eta: 0:00:20)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3011/3125 0.152s + 0.011s (eta: 0:00:18)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3021/3125 0.152s + 0.011s (eta: 0:00:16)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3031/3125 0.152s + 0.011s (eta: 0:00:15)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3041/3125 0.152s + 0.011s (eta: 0:00:13)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3051/3125 0.153s + 0.012s (eta: 0:00:12)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3061/3125 0.153s + 0.012s (eta: 0:00:10)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3071/3125 0.153s + 0.012s (eta: 0:00:08)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3081/3125 0.153s + 0.012s (eta: 0:00:07)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3091/3125 0.153s + 0.012s (eta: 0:00:05)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3101/3125 0.153s + 0.012s (eta: 0:00:03)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3111/3125 0.153s + 0.012s (eta: 0:00:02)
+INFO test_engine.py: 339: im_detect: range [2501, 3125] of 5000: 3121/3125 0.153s + 0.012s (eta: 0:00:00)
+INFO test_engine.py: 372: Wrote detections to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/detection_range_2500_3125.pkl
+
+INFO subprocess.py: 147: # ---------------------------------------------------------------------------- #
+INFO subprocess.py: 149: stdout of subprocess 5 with range [3126, 3750]
+INFO subprocess.py: 151: # ---------------------------------------------------------------------------- #
+INFO test_net.py:  68: Called with args:
+INFO test_net.py:  69: Namespace(cfg_file='test/detection_range_config.yaml', dataset=None, load_ckpt='best_ckpt/model_step142499.pth', load_detectron=None, multi_gpu_testing=False, output_dir='test', range=[3125, 3750], set_cfgs=['TEST.DATASETS', '("coco_2014_minival",)'], vis=False)
+INFO test_net.py: 109: Testing with config:
+INFO test_net.py: 110: {'BBOX_XFORM_CLIP': 4.135166556742356,
+ 'CROP_RESIZE_WITH_MAX_POOL': True,
+ 'CUDA': False,
+ 'DATA_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data',
+ 'DATA_LOADER': {'NUM_THREADS': 4},
+ 'DEBUG': False,
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': '',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'CONV_HEAD_DIM': 256,
+               'MLP_HEAD_DIM': 1024,
+               'NUM_STACKED_CONVS': 4,
+               'ROI_BOX_HEAD': '',
+               'ROI_XFORM_METHOD': 'RoIPoolF',
+               'ROI_XFORM_RESOLUTION': 14,
+               'ROI_XFORM_SAMPLING_RATIO': 0},
+ 'FPN': {'COARSEST_STRIDE': 128,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': True,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 3,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_COLLECT_SCALE': 1,
+         'RPN_MAX_LEVEL': 7,
+         'RPN_MIN_LEVEL': 3,
+         'USE_GN': False,
+         'ZERO_INIT_LATERAL': False},
+ 'GROUP_NORM': {'DIM_PER_GP': -1, 'EPSILON': 1e-05, 'NUM_GROUPS': 32},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.fpn_ResNet50_conv5_body',
+           'FASTER_RCNN': False,
+           'KEYPOINTS_ON': False,
+           'LOAD_IMAGENET_PRETRAINED_WEIGHTS': True,
+           'MASK_ON': False,
+           'NUM_CLASSES': 81,
+           'RPN_ONLY': False,
+           'SHARE_RES5': False,
+           'TYPE': 'retinanet',
+           'UNSUPERVISED_POSE': False},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'GaussianFill',
+           'DILATION': 2,
+           'DIM_REDUCED': 256,
+           'MEMORY_EFFICIENT_LOSS': True,
+           'RESOLUTION': 14,
+           'ROI_MASK_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 8,
+ 'OUTPUT_DIR': 'Outputs',
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'PYTORCH_VERSION_LESS_THAN_040': False,
+ 'RESNETS': {'FREEZE_AT': 2,
+             'IMAGENET_PRETRAINED_WEIGHTS': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data/pretrained_model/retinanet.pkl',
+             'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'SHORTCUT_FUNC': 'basic_bn_shortcut',
+             'STEM_FUNC': 'basic_bn_stem',
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'USE_GN': False,
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (1.0, 2.0, 0.5),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': True,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'CLS_ACTIVATION': 'sigmoid',
+         'OUT_DIM': 512,
+         'OUT_DIM_AS_IN_DIM': True,
+         'RPN_ON': False,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.01,
+            'BIAS_DOUBLE_LR': True,
+            'BIAS_WEIGHT_DECAY': False,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 90000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 60000, 80000],
+            'STEP_SIZE': 30000,
+            'TYPE': 'SGD',
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': 'linear',
+            'WEIGHT_DECAY': 0.0001,
+            'WEIGHT_DECAY_GN': 0.0},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASETS': ('coco_2014_minival',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1333,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 2000,
+          'RPN_PRE_NMS_TOP_N': 10000,
+          'SCALE': 800,
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5}},
+ 'TRAIN': {'ASPECT_CROPPING': False,
+           'ASPECT_GROUPING': True,
+           'ASPECT_HI': 2,
+           'ASPECT_LO': 0.5,
+           'BATCH_SIZE_PER_IM': 64,
+           'BBOX_INSIDE_WEIGHTS': (1.0, 1.0, 1.0, 1.0),
+           'BBOX_NORMALIZE_MEANS': (0.0, 0.0, 0.0, 0.0),
+           'BBOX_NORMALIZE_STDS': (0.1, 0.1, 0.2, 0.2),
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': False,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('coco_2017_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 2,
+           'MAX_SIZE': 1333,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': -1,
+           'SCALES': (800,),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True},
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+loading annotations into memory...
+Done (t=0.59s)
+creating index...
+index created!
+INFO test_engine.py: 391: loading checkpoint best_ckpt/model_step142499.pth
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3126/3750 0.252s + 0.071s (eta: 0:03:21)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3136/3750 0.167s + 0.015s (eta: 0:01:51)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3146/3750 0.160s + 0.014s (eta: 0:01:45)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3156/3750 0.157s + 0.012s (eta: 0:01:40)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3166/3750 0.156s + 0.012s (eta: 0:01:37)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3176/3750 0.155s + 0.012s (eta: 0:01:35)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3186/3750 0.154s + 0.011s (eta: 0:01:33)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3196/3750 0.155s + 0.011s (eta: 0:01:32)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3206/3750 0.154s + 0.012s (eta: 0:01:30)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3216/3750 0.154s + 0.012s (eta: 0:01:28)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3226/3750 0.154s + 0.012s (eta: 0:01:27)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3236/3750 0.154s + 0.012s (eta: 0:01:25)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3246/3750 0.154s + 0.012s (eta: 0:01:23)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3256/3750 0.154s + 0.012s (eta: 0:01:21)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3266/3750 0.154s + 0.012s (eta: 0:01:19)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3276/3750 0.154s + 0.011s (eta: 0:01:18)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3286/3750 0.154s + 0.011s (eta: 0:01:16)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3296/3750 0.154s + 0.011s (eta: 0:01:15)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3306/3750 0.154s + 0.011s (eta: 0:01:13)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3316/3750 0.154s + 0.011s (eta: 0:01:11)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3326/3750 0.154s + 0.011s (eta: 0:01:10)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3336/3750 0.154s + 0.011s (eta: 0:01:08)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3346/3750 0.154s + 0.011s (eta: 0:01:06)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3356/3750 0.154s + 0.011s (eta: 0:01:05)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3366/3750 0.154s + 0.012s (eta: 0:01:03)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3376/3750 0.154s + 0.011s (eta: 0:01:01)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3386/3750 0.154s + 0.011s (eta: 0:01:00)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3396/3750 0.154s + 0.011s (eta: 0:00:58)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3406/3750 0.153s + 0.011s (eta: 0:00:56)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3416/3750 0.153s + 0.011s (eta: 0:00:54)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3426/3750 0.154s + 0.011s (eta: 0:00:53)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3436/3750 0.154s + 0.011s (eta: 0:00:51)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3446/3750 0.154s + 0.011s (eta: 0:00:50)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3456/3750 0.154s + 0.011s (eta: 0:00:48)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3466/3750 0.154s + 0.011s (eta: 0:00:46)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3476/3750 0.154s + 0.011s (eta: 0:00:45)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3486/3750 0.154s + 0.011s (eta: 0:00:43)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3496/3750 0.154s + 0.011s (eta: 0:00:41)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3506/3750 0.154s + 0.011s (eta: 0:00:40)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3516/3750 0.154s + 0.011s (eta: 0:00:38)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3526/3750 0.154s + 0.011s (eta: 0:00:36)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3536/3750 0.154s + 0.011s (eta: 0:00:35)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3546/3750 0.154s + 0.011s (eta: 0:00:33)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3556/3750 0.154s + 0.011s (eta: 0:00:31)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3566/3750 0.154s + 0.011s (eta: 0:00:30)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3576/3750 0.154s + 0.011s (eta: 0:00:28)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3586/3750 0.154s + 0.011s (eta: 0:00:27)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3596/3750 0.154s + 0.011s (eta: 0:00:25)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3606/3750 0.154s + 0.011s (eta: 0:00:23)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3616/3750 0.154s + 0.011s (eta: 0:00:22)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3626/3750 0.154s + 0.011s (eta: 0:00:20)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3636/3750 0.154s + 0.011s (eta: 0:00:18)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3646/3750 0.154s + 0.011s (eta: 0:00:17)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3656/3750 0.154s + 0.011s (eta: 0:00:15)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3666/3750 0.154s + 0.011s (eta: 0:00:13)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3676/3750 0.155s + 0.012s (eta: 0:00:12)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3686/3750 0.155s + 0.012s (eta: 0:00:10)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3696/3750 0.155s + 0.012s (eta: 0:00:09)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3706/3750 0.155s + 0.012s (eta: 0:00:07)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3716/3750 0.155s + 0.012s (eta: 0:00:05)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3726/3750 0.155s + 0.012s (eta: 0:00:04)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3736/3750 0.155s + 0.012s (eta: 0:00:02)
+INFO test_engine.py: 339: im_detect: range [3126, 3750] of 5000: 3746/3750 0.155s + 0.012s (eta: 0:00:00)
+INFO test_engine.py: 372: Wrote detections to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/detection_range_3125_3750.pkl
+
+INFO subprocess.py: 147: # ---------------------------------------------------------------------------- #
+INFO subprocess.py: 149: stdout of subprocess 6 with range [3751, 4375]
+INFO subprocess.py: 151: # ---------------------------------------------------------------------------- #
+INFO test_net.py:  68: Called with args:
+INFO test_net.py:  69: Namespace(cfg_file='test/detection_range_config.yaml', dataset=None, load_ckpt='best_ckpt/model_step142499.pth', load_detectron=None, multi_gpu_testing=False, output_dir='test', range=[3750, 4375], set_cfgs=['TEST.DATASETS', '("coco_2014_minival",)'], vis=False)
+INFO test_net.py: 109: Testing with config:
+INFO test_net.py: 110: {'BBOX_XFORM_CLIP': 4.135166556742356,
+ 'CROP_RESIZE_WITH_MAX_POOL': True,
+ 'CUDA': False,
+ 'DATA_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data',
+ 'DATA_LOADER': {'NUM_THREADS': 4},
+ 'DEBUG': False,
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': '',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'CONV_HEAD_DIM': 256,
+               'MLP_HEAD_DIM': 1024,
+               'NUM_STACKED_CONVS': 4,
+               'ROI_BOX_HEAD': '',
+               'ROI_XFORM_METHOD': 'RoIPoolF',
+               'ROI_XFORM_RESOLUTION': 14,
+               'ROI_XFORM_SAMPLING_RATIO': 0},
+ 'FPN': {'COARSEST_STRIDE': 128,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': True,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 3,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_COLLECT_SCALE': 1,
+         'RPN_MAX_LEVEL': 7,
+         'RPN_MIN_LEVEL': 3,
+         'USE_GN': False,
+         'ZERO_INIT_LATERAL': False},
+ 'GROUP_NORM': {'DIM_PER_GP': -1, 'EPSILON': 1e-05, 'NUM_GROUPS': 32},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.fpn_ResNet50_conv5_body',
+           'FASTER_RCNN': False,
+           'KEYPOINTS_ON': False,
+           'LOAD_IMAGENET_PRETRAINED_WEIGHTS': True,
+           'MASK_ON': False,
+           'NUM_CLASSES': 81,
+           'RPN_ONLY': False,
+           'SHARE_RES5': False,
+           'TYPE': 'retinanet',
+           'UNSUPERVISED_POSE': False},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'GaussianFill',
+           'DILATION': 2,
+           'DIM_REDUCED': 256,
+           'MEMORY_EFFICIENT_LOSS': True,
+           'RESOLUTION': 14,
+           'ROI_MASK_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 8,
+ 'OUTPUT_DIR': 'Outputs',
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'PYTORCH_VERSION_LESS_THAN_040': False,
+ 'RESNETS': {'FREEZE_AT': 2,
+             'IMAGENET_PRETRAINED_WEIGHTS': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data/pretrained_model/retinanet.pkl',
+             'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'SHORTCUT_FUNC': 'basic_bn_shortcut',
+             'STEM_FUNC': 'basic_bn_stem',
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'USE_GN': False,
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (1.0, 2.0, 0.5),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': True,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'CLS_ACTIVATION': 'sigmoid',
+         'OUT_DIM': 512,
+         'OUT_DIM_AS_IN_DIM': True,
+         'RPN_ON': False,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.01,
+            'BIAS_DOUBLE_LR': True,
+            'BIAS_WEIGHT_DECAY': False,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 90000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 60000, 80000],
+            'STEP_SIZE': 30000,
+            'TYPE': 'SGD',
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': 'linear',
+            'WEIGHT_DECAY': 0.0001,
+            'WEIGHT_DECAY_GN': 0.0},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASETS': ('coco_2014_minival',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1333,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 2000,
+          'RPN_PRE_NMS_TOP_N': 10000,
+          'SCALE': 800,
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5}},
+ 'TRAIN': {'ASPECT_CROPPING': False,
+           'ASPECT_GROUPING': True,
+           'ASPECT_HI': 2,
+           'ASPECT_LO': 0.5,
+           'BATCH_SIZE_PER_IM': 64,
+           'BBOX_INSIDE_WEIGHTS': (1.0, 1.0, 1.0, 1.0),
+           'BBOX_NORMALIZE_MEANS': (0.0, 0.0, 0.0, 0.0),
+           'BBOX_NORMALIZE_STDS': (0.1, 0.1, 0.2, 0.2),
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': False,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('coco_2017_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 2,
+           'MAX_SIZE': 1333,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': -1,
+           'SCALES': (800,),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True},
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+loading annotations into memory...
+Done (t=0.58s)
+creating index...
+index created!
+INFO test_engine.py: 391: loading checkpoint best_ckpt/model_step142499.pth
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3751/4375 0.257s + 0.077s (eta: 0:03:28)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3761/4375 0.157s + 0.016s (eta: 0:01:46)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3771/4375 0.152s + 0.013s (eta: 0:01:39)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3781/4375 0.154s + 0.014s (eta: 0:01:39)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3791/4375 0.155s + 0.013s (eta: 0:01:38)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3801/4375 0.155s + 0.012s (eta: 0:01:36)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3811/4375 0.154s + 0.012s (eta: 0:01:33)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3821/4375 0.154s + 0.012s (eta: 0:01:32)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3831/4375 0.154s + 0.012s (eta: 0:01:30)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3841/4375 0.154s + 0.012s (eta: 0:01:28)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3851/4375 0.154s + 0.012s (eta: 0:01:26)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3861/4375 0.154s + 0.011s (eta: 0:01:25)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3871/4375 0.154s + 0.012s (eta: 0:01:23)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3881/4375 0.153s + 0.011s (eta: 0:01:21)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3891/4375 0.153s + 0.011s (eta: 0:01:19)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3901/4375 0.153s + 0.011s (eta: 0:01:17)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3911/4375 0.153s + 0.011s (eta: 0:01:16)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3921/4375 0.153s + 0.011s (eta: 0:01:14)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3931/4375 0.153s + 0.011s (eta: 0:01:12)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3941/4375 0.153s + 0.011s (eta: 0:01:11)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3951/4375 0.153s + 0.011s (eta: 0:01:09)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3961/4375 0.153s + 0.011s (eta: 0:01:08)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3971/4375 0.153s + 0.011s (eta: 0:01:06)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3981/4375 0.153s + 0.011s (eta: 0:01:04)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 3991/4375 0.153s + 0.011s (eta: 0:01:02)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4001/4375 0.153s + 0.011s (eta: 0:01:01)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4011/4375 0.153s + 0.011s (eta: 0:00:59)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4021/4375 0.153s + 0.011s (eta: 0:00:57)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4031/4375 0.153s + 0.011s (eta: 0:00:56)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4041/4375 0.153s + 0.012s (eta: 0:00:54)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4051/4375 0.153s + 0.012s (eta: 0:00:53)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4061/4375 0.153s + 0.012s (eta: 0:00:51)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4071/4375 0.153s + 0.012s (eta: 0:00:49)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4081/4375 0.153s + 0.012s (eta: 0:00:48)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4091/4375 0.153s + 0.012s (eta: 0:00:46)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4101/4375 0.153s + 0.012s (eta: 0:00:45)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4111/4375 0.153s + 0.011s (eta: 0:00:43)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4121/4375 0.153s + 0.011s (eta: 0:00:41)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4131/4375 0.153s + 0.011s (eta: 0:00:40)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4141/4375 0.153s + 0.011s (eta: 0:00:38)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4151/4375 0.153s + 0.011s (eta: 0:00:36)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4161/4375 0.153s + 0.011s (eta: 0:00:35)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4171/4375 0.153s + 0.011s (eta: 0:00:33)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4181/4375 0.153s + 0.011s (eta: 0:00:31)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4191/4375 0.153s + 0.011s (eta: 0:00:30)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4201/4375 0.153s + 0.011s (eta: 0:00:28)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4211/4375 0.153s + 0.011s (eta: 0:00:27)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4221/4375 0.153s + 0.011s (eta: 0:00:25)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4231/4375 0.153s + 0.011s (eta: 0:00:23)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4241/4375 0.153s + 0.011s (eta: 0:00:22)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4251/4375 0.153s + 0.011s (eta: 0:00:20)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4261/4375 0.153s + 0.011s (eta: 0:00:18)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4271/4375 0.153s + 0.011s (eta: 0:00:17)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4281/4375 0.153s + 0.011s (eta: 0:00:15)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4291/4375 0.153s + 0.011s (eta: 0:00:13)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4301/4375 0.154s + 0.012s (eta: 0:00:12)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4311/4375 0.154s + 0.012s (eta: 0:00:10)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4321/4375 0.153s + 0.012s (eta: 0:00:08)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4331/4375 0.154s + 0.012s (eta: 0:00:07)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4341/4375 0.153s + 0.012s (eta: 0:00:05)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4351/4375 0.153s + 0.012s (eta: 0:00:03)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4361/4375 0.153s + 0.012s (eta: 0:00:02)
+INFO test_engine.py: 339: im_detect: range [3751, 4375] of 5000: 4371/4375 0.153s + 0.012s (eta: 0:00:00)
+INFO test_engine.py: 372: Wrote detections to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/detection_range_3750_4375.pkl
+
+INFO subprocess.py: 147: # ---------------------------------------------------------------------------- #
+INFO subprocess.py: 149: stdout of subprocess 7 with range [4376, 5000]
+INFO subprocess.py: 151: # ---------------------------------------------------------------------------- #
+INFO test_net.py:  68: Called with args:
+INFO test_net.py:  69: Namespace(cfg_file='test/detection_range_config.yaml', dataset=None, load_ckpt='best_ckpt/model_step142499.pth', load_detectron=None, multi_gpu_testing=False, output_dir='test', range=[4375, 5000], set_cfgs=['TEST.DATASETS', '("coco_2014_minival",)'], vis=False)
+INFO test_net.py: 109: Testing with config:
+INFO test_net.py: 110: {'BBOX_XFORM_CLIP': 4.135166556742356,
+ 'CROP_RESIZE_WITH_MAX_POOL': True,
+ 'CUDA': False,
+ 'DATA_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data',
+ 'DATA_LOADER': {'NUM_THREADS': 4},
+ 'DEBUG': False,
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': '',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'CONV_HEAD_DIM': 256,
+               'MLP_HEAD_DIM': 1024,
+               'NUM_STACKED_CONVS': 4,
+               'ROI_BOX_HEAD': '',
+               'ROI_XFORM_METHOD': 'RoIPoolF',
+               'ROI_XFORM_RESOLUTION': 14,
+               'ROI_XFORM_SAMPLING_RATIO': 0},
+ 'FPN': {'COARSEST_STRIDE': 128,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': True,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 3,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_COLLECT_SCALE': 1,
+         'RPN_MAX_LEVEL': 7,
+         'RPN_MIN_LEVEL': 3,
+         'USE_GN': False,
+         'ZERO_INIT_LATERAL': False},
+ 'GROUP_NORM': {'DIM_PER_GP': -1, 'EPSILON': 1e-05, 'NUM_GROUPS': 32},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.fpn_ResNet50_conv5_body',
+           'FASTER_RCNN': False,
+           'KEYPOINTS_ON': False,
+           'LOAD_IMAGENET_PRETRAINED_WEIGHTS': True,
+           'MASK_ON': False,
+           'NUM_CLASSES': 81,
+           'RPN_ONLY': False,
+           'SHARE_RES5': False,
+           'TYPE': 'retinanet',
+           'UNSUPERVISED_POSE': False},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'GaussianFill',
+           'DILATION': 2,
+           'DIM_REDUCED': 256,
+           'MEMORY_EFFICIENT_LOSS': True,
+           'RESOLUTION': 14,
+           'ROI_MASK_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 8,
+ 'OUTPUT_DIR': 'Outputs',
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'PYTORCH_VERSION_LESS_THAN_040': False,
+ 'RESNETS': {'FREEZE_AT': 2,
+             'IMAGENET_PRETRAINED_WEIGHTS': '/mnt/lustre/chenzihao/mask-rcnn.pytorch/data/pretrained_model/retinanet.pkl',
+             'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'SHORTCUT_FUNC': 'basic_bn_shortcut',
+             'STEM_FUNC': 'basic_bn_stem',
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'USE_GN': False,
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (1.0, 2.0, 0.5),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': True,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/mnt/lustre/chenzihao/mask-rcnn.pytorch',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'CLS_ACTIVATION': 'sigmoid',
+         'OUT_DIM': 512,
+         'OUT_DIM_AS_IN_DIM': True,
+         'RPN_ON': False,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.01,
+            'BIAS_DOUBLE_LR': True,
+            'BIAS_WEIGHT_DECAY': False,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 90000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 60000, 80000],
+            'STEP_SIZE': 30000,
+            'TYPE': 'SGD',
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': 'linear',
+            'WEIGHT_DECAY': 0.0001,
+            'WEIGHT_DECAY_GN': 0.0},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASETS': ('coco_2014_minival',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1333,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 2000,
+          'RPN_PRE_NMS_TOP_N': 10000,
+          'SCALE': 800,
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5}},
+ 'TRAIN': {'ASPECT_CROPPING': False,
+           'ASPECT_GROUPING': True,
+           'ASPECT_HI': 2,
+           'ASPECT_LO': 0.5,
+           'BATCH_SIZE_PER_IM': 64,
+           'BBOX_INSIDE_WEIGHTS': (1.0, 1.0, 1.0, 1.0),
+           'BBOX_NORMALIZE_MEANS': (0.0, 0.0, 0.0, 0.0),
+           'BBOX_NORMALIZE_STDS': (0.1, 0.1, 0.2, 0.2),
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': False,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('coco_2017_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 2,
+           'MAX_SIZE': 1333,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': -1,
+           'SCALES': (800,),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True},
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+loading annotations into memory...
+Done (t=0.52s)
+creating index...
+index created!
+INFO test_engine.py: 391: loading checkpoint best_ckpt/model_step142499.pth
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4376/5000 0.256s + 0.077s (eta: 0:03:27)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4386/5000 0.158s + 0.017s (eta: 0:01:47)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4396/5000 0.157s + 0.014s (eta: 0:01:42)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4406/5000 0.156s + 0.013s (eta: 0:01:40)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4416/5000 0.154s + 0.012s (eta: 0:01:36)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4426/5000 0.154s + 0.012s (eta: 0:01:34)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4436/5000 0.152s + 0.011s (eta: 0:01:32)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4446/5000 0.153s + 0.011s (eta: 0:01:30)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4456/5000 0.153s + 0.011s (eta: 0:01:29)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4466/5000 0.153s + 0.011s (eta: 0:01:27)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4476/5000 0.152s + 0.011s (eta: 0:01:25)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4486/5000 0.152s + 0.011s (eta: 0:01:23)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4496/5000 0.152s + 0.011s (eta: 0:01:21)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4506/5000 0.152s + 0.011s (eta: 0:01:20)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4516/5000 0.152s + 0.010s (eta: 0:01:18)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4526/5000 0.152s + 0.010s (eta: 0:01:16)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4536/5000 0.152s + 0.010s (eta: 0:01:15)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4546/5000 0.152s + 0.010s (eta: 0:01:13)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4556/5000 0.152s + 0.010s (eta: 0:01:12)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4566/5000 0.152s + 0.010s (eta: 0:01:10)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4576/5000 0.152s + 0.010s (eta: 0:01:08)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4586/5000 0.152s + 0.011s (eta: 0:01:07)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4596/5000 0.152s + 0.011s (eta: 0:01:05)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4606/5000 0.152s + 0.011s (eta: 0:01:04)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4616/5000 0.152s + 0.011s (eta: 0:01:02)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4626/5000 0.152s + 0.011s (eta: 0:01:00)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4636/5000 0.152s + 0.011s (eta: 0:00:59)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4646/5000 0.152s + 0.011s (eta: 0:00:57)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4656/5000 0.152s + 0.011s (eta: 0:00:56)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4666/5000 0.152s + 0.011s (eta: 0:00:54)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4676/5000 0.152s + 0.011s (eta: 0:00:52)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4686/5000 0.152s + 0.011s (eta: 0:00:51)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4696/5000 0.152s + 0.011s (eta: 0:00:49)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4706/5000 0.152s + 0.011s (eta: 0:00:47)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4716/5000 0.152s + 0.011s (eta: 0:00:46)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4726/5000 0.152s + 0.011s (eta: 0:00:44)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4736/5000 0.152s + 0.011s (eta: 0:00:43)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4746/5000 0.152s + 0.011s (eta: 0:00:41)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4756/5000 0.152s + 0.011s (eta: 0:00:39)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4766/5000 0.152s + 0.011s (eta: 0:00:38)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4776/5000 0.152s + 0.011s (eta: 0:00:36)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4786/5000 0.152s + 0.011s (eta: 0:00:34)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4796/5000 0.152s + 0.011s (eta: 0:00:33)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4806/5000 0.152s + 0.011s (eta: 0:00:31)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4816/5000 0.152s + 0.011s (eta: 0:00:30)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4826/5000 0.152s + 0.011s (eta: 0:00:28)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4836/5000 0.152s + 0.011s (eta: 0:00:26)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4846/5000 0.152s + 0.011s (eta: 0:00:25)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4856/5000 0.152s + 0.011s (eta: 0:00:23)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4866/5000 0.152s + 0.011s (eta: 0:00:21)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4876/5000 0.152s + 0.011s (eta: 0:00:20)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4886/5000 0.152s + 0.011s (eta: 0:00:18)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4896/5000 0.152s + 0.011s (eta: 0:00:16)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4906/5000 0.153s + 0.011s (eta: 0:00:15)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4916/5000 0.153s + 0.011s (eta: 0:00:13)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4926/5000 0.153s + 0.011s (eta: 0:00:12)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4936/5000 0.153s + 0.011s (eta: 0:00:10)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4946/5000 0.154s + 0.011s (eta: 0:00:08)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4956/5000 0.154s + 0.011s (eta: 0:00:07)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4966/5000 0.154s + 0.011s (eta: 0:00:05)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4976/5000 0.153s + 0.011s (eta: 0:00:03)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4986/5000 0.153s + 0.011s (eta: 0:00:02)
+INFO test_engine.py: 339: im_detect: range [4376, 5000] of 5000: 4996/5000 0.153s + 0.011s (eta: 0:00:00)
+INFO test_engine.py: 372: Wrote detections to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/detection_range_4375_5000.pkl
+
+INFO test_engine.py: 252: Wrote detections to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/detections.pkl
+INFO test_engine.py: 196: Total inference time: 171.195s
+INFO task_evaluation.py:  75: Evaluating detections
+INFO json_dataset_evaluator.py: 162: Writing bbox results json to: /mnt/lustre/chenzihao/mask-rcnn.pytorch/test/bbox_coco_2014_minival_results.json
+Loading and preparing results...
+DONE (t=3.26s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=68.64s).
+Accumulating evaluation results...
+DONE (t=15.18s).
+INFO json_dataset_evaluator.py: 222: ~~~~ Mean and per-category AP @ IoU=[0.50,0.95] ~~~~
+INFO json_dataset_evaluator.py: 223: 35.4
+INFO json_dataset_evaluator.py: 231: 48.4
+INFO json_dataset_evaluator.py: 231: 27.9
+INFO json_dataset_evaluator.py: 231: 37.8
+INFO json_dataset_evaluator.py: 231: 39.5
+INFO json_dataset_evaluator.py: 231: 58.6
+INFO json_dataset_evaluator.py: 231: 61.9
+INFO json_dataset_evaluator.py: 231: 56.6
+INFO json_dataset_evaluator.py: 231: 33.3
+INFO json_dataset_evaluator.py: 231: 20.6
+INFO json_dataset_evaluator.py: 231: 22.1
+INFO json_dataset_evaluator.py: 231: 61.8
+INFO json_dataset_evaluator.py: 231: 61.6
+INFO json_dataset_evaluator.py: 231: 44.4
+INFO json_dataset_evaluator.py: 231: 19.4
+INFO json_dataset_evaluator.py: 231: 30.4
+INFO json_dataset_evaluator.py: 231: 62.5
+INFO json_dataset_evaluator.py: 231: 58.4
+INFO json_dataset_evaluator.py: 231: 50.5
+INFO json_dataset_evaluator.py: 231: 43.5
+INFO json_dataset_evaluator.py: 231: 48.1
+INFO json_dataset_evaluator.py: 231: 56.3
+INFO json_dataset_evaluator.py: 231: 67.4
+INFO json_dataset_evaluator.py: 231: 62.7
+INFO json_dataset_evaluator.py: 231: 60.1
+INFO json_dataset_evaluator.py: 231: 12.6
+INFO json_dataset_evaluator.py: 231: 33.1
+INFO json_dataset_evaluator.py: 231: 11.2
+INFO json_dataset_evaluator.py: 231: 25.1
+INFO json_dataset_evaluator.py: 231: 29.2
+INFO json_dataset_evaluator.py: 231: 59.2
+INFO json_dataset_evaluator.py: 231: 14.3
+INFO json_dataset_evaluator.py: 231: 16.6
+INFO json_dataset_evaluator.py: 231: 35.1
+INFO json_dataset_evaluator.py: 231: 30.7
+INFO json_dataset_evaluator.py: 231: 21.7
+INFO json_dataset_evaluator.py: 231: 30.1
+INFO json_dataset_evaluator.py: 231: 47.9
+INFO json_dataset_evaluator.py: 231: 29.2
+INFO json_dataset_evaluator.py: 231: 41.9
+INFO json_dataset_evaluator.py: 231: 31.5
+INFO json_dataset_evaluator.py: 231: 31.0
+INFO json_dataset_evaluator.py: 231: 38.1
+INFO json_dataset_evaluator.py: 231: 20.8
+INFO json_dataset_evaluator.py: 231: 9.1
+INFO json_dataset_evaluator.py: 231: 8.3
+INFO json_dataset_evaluator.py: 231: 35.3
+INFO json_dataset_evaluator.py: 231: 21.0
+INFO json_dataset_evaluator.py: 231: 18.6
+INFO json_dataset_evaluator.py: 231: 28.0
+INFO json_dataset_evaluator.py: 231: 26.1
+INFO json_dataset_evaluator.py: 231: 19.8
+INFO json_dataset_evaluator.py: 231: 18.0
+INFO json_dataset_evaluator.py: 231: 25.8
+INFO json_dataset_evaluator.py: 231: 43.8
+INFO json_dataset_evaluator.py: 231: 37.8
+INFO json_dataset_evaluator.py: 231: 29.1
+INFO json_dataset_evaluator.py: 231: 22.8
+INFO json_dataset_evaluator.py: 231: 37.1
+INFO json_dataset_evaluator.py: 231: 22.9
+INFO json_dataset_evaluator.py: 231: 41.1
+INFO json_dataset_evaluator.py: 231: 24.1
+INFO json_dataset_evaluator.py: 231: 53.9
+INFO json_dataset_evaluator.py: 231: 52.1
+INFO json_dataset_evaluator.py: 231: 52.0
+INFO json_dataset_evaluator.py: 231: 58.0
+INFO json_dataset_evaluator.py: 231: 22.2
+INFO json_dataset_evaluator.py: 231: 42.2
+INFO json_dataset_evaluator.py: 231: 31.9
+INFO json_dataset_evaluator.py: 231: 53.4
+INFO json_dataset_evaluator.py: 231: 30.8
+INFO json_dataset_evaluator.py: 231: 22.1
+INFO json_dataset_evaluator.py: 231: 30.8
+INFO json_dataset_evaluator.py: 231: 47.4
+INFO json_dataset_evaluator.py: 231: 10.9
+INFO json_dataset_evaluator.py: 231: 47.9
+INFO json_dataset_evaluator.py: 231: 32.0
+INFO json_dataset_evaluator.py: 231: 26.5
+INFO json_dataset_evaluator.py: 231: 41.5
+INFO json_dataset_evaluator.py: 231: 0.7
+INFO json_dataset_evaluator.py: 231: 12.9
+INFO json_dataset_evaluator.py: 232: ~~~~ Summary metrics ~~~~
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.354
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.545
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.382
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.192
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.393
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.475
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.307
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.487
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.516
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.325
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.563
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.678
+INFO json_dataset_evaluator.py: 199: Wrote json eval results to: test/detection_results.pkl
+INFO task_evaluation.py:  61: Evaluating bounding boxes is done!
+INFO task_evaluation.py: 180: copypaste: Dataset: coco_2014_minival
+INFO task_evaluation.py: 182: copypaste: Task: box
+INFO task_evaluation.py: 185: copypaste: AP,AP50,AP75,APs,APm,APl
+INFO task_evaluation.py: 186: copypaste: 0.3539,0.5448,0.3824,0.1915,0.3932,0.4753
